@@ -70,13 +70,13 @@ popd
 
 
 %files
-%{python_sitelib}/cryptography/
-%{python_sitelib}/cryptography-*.egg-info
+%{py_platsitedir}/cryptography/
+%{py_platsitedir}/cryptography-*.egg-info
 
 
 %files -n python2-%{pname}
-%{python2_sitelib}/cryptography
-%{python2_sitelib}/cryptography-*.egg-info
+%{py2_platsitedir}/cryptography
+%{py2_platsitedir}/cryptography-*.egg-info
 
 %files doc
 %doc README.rst CHANGELOG.rst
