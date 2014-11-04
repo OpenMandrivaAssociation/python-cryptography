@@ -7,6 +7,7 @@ Name:		python-%{pname}
 Version:	0.6.1
 Release:	1
 Source0:	http://pypi.python.org/packages/source/c/%{pname}/%pname-%{version}.tar.gz
+Source100:	%{name}.rpmlintrc
 License:	LGPLv2
 Group:		Development/Python
 Url:		https://github.com/pyca/cryptography
