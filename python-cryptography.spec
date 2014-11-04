@@ -12,7 +12,11 @@ Group:		Development/Python
 Url:		https://github.com/pyca/cryptography
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(python3)
+BuildRequires:	python-six
+BuildRequires:	python-cffi
 BuildRequires:	pkgconfig(python2)
+BuildRequires:	python2-six
+BuildRequires:	python2-cffi
 BuildRequires:	python-distribute
 BuildRequires:	python2-distribute
 
