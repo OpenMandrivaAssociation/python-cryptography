@@ -5,7 +5,7 @@
 Summary:	crytographic recipes for python
 Name:		python-%{pname}
 Version:	0.6.1
-Release:	1
+Release:	2
 Source0:	http://pypi.python.org/packages/source/c/%{pname}/%pname-%{version}.tar.gz
 Source100:	%{name}.rpmlintrc
 License:	LGPLv2
