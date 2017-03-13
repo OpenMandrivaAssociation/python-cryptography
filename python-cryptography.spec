@@ -5,7 +5,7 @@
 Summary:	crytographic recipes for python
 Name:		python-%{pname}
 Version:	1.8.1
-Release:	1
+Release:	2
 Source0:	http://pypi.python.org/packages/source/c/%{pname}/%pname-%{version}.tar.gz
 Source100:	%{name}.rpmlintrc
 License:	LGPLv2
@@ -20,7 +20,7 @@ BuildRequires:	python2-six
 BuildRequires:	python2-cffi
 BuildRequires:	python-distribute
 BuildRequires:	python2-distribute
-Requires:	python2-pkg-resources
+Requires:	python-pkg-resources
 
 %description
 cryptography is a package which provides cryptographic recipes 
