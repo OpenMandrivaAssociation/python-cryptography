@@ -4,7 +4,7 @@
 
 Summary:	crytographic recipes for python
 Name:		python-%{pname}
-Version:	1.5
+Version:	1.8.1
 Release:	1
 Source0:	http://pypi.python.org/packages/source/c/%{pname}/%pname-%{version}.tar.gz
 Source100:	%{name}.rpmlintrc
@@ -20,6 +20,7 @@ BuildRequires:	python2-six
 BuildRequires:	python2-cffi
 BuildRequires:	python-distribute
 BuildRequires:	python2-distribute
+Requires:	python2-pkg-resources
 
 %description
 cryptography is a package which provides cryptographic recipes 
@@ -32,6 +33,7 @@ ciphers, message digests and key derivation functions.
 %package -n python2-%{pname}
 Summary:	cryptographic recipes for python
 Group:		Development/Python
+Requires:	python2-pkg-resources
 
 %description -n python2-%{pname}
 cryptography is a package which provides cryptographic recipes
