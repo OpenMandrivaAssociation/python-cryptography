@@ -4,9 +4,9 @@
 
 Summary:	crytographic recipes for python
 Name:		python-%{pname}
-Version:	1.8.1
-Release:	2
-Source0:	http://pypi.python.org/packages/source/c/%{pname}/%pname-%{version}.tar.gz
+Version:	1.9
+Release:	1
+Source0:	https://github.com/pyca/cryptography/archive/%{version}.tar.gz
 Source100:	%{name}.rpmlintrc
 License:	LGPLv2
 Group:		Development/Python
