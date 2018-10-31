@@ -5,7 +5,7 @@
 Summary:	crytographic recipes for python
 Name:		python-%{pname}
 Version:	2.1.4
-Release:	1
+Release:	2
 Source0:	https://github.com/pyca/cryptography/archive/%{version}.tar.gz
 Source100:	%{name}.rpmlintrc
 License:	LGPLv2
