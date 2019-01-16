@@ -1,12 +1,11 @@
 %define debug_package %nil
 %define pname cryptography
-%define name python-%{pname}
 
-Summary:	crytographic recipes for python
+Summary:	Crytographic recipes for python
 Name:		python-%{pname}
-Version:	2.4.2
+Version:	2.4.1
 Release:	1
-Source0:	https://github.com/pyca/cryptography/archive/%{version}.tar.gz
+Source0:	https://pypi.io/packages/source/c/cryptography/cryptography-%{version}.tar.gz
 Source100:	%{name}.rpmlintrc
 License:	LGPLv2
 Group:		Development/Python
@@ -31,7 +30,7 @@ interfaces to common cryptographic algorithms such as symmetric
 ciphers, message digests and key derivation functions.
 
 %package -n python2-%{pname}
-Summary:	cryptographic recipes for python
+Summary:	Cryptographic recipes for python
 Group:		Development/Python
 Requires:	python2-pkg-resources
 
@@ -58,17 +57,17 @@ find %{py2dir} -name '*.py' | xargs sed -i '1s|^#!python|#!%{__python2}|'
 find -name '*.py' | xargs sed -i '1s|^#!python|#!%{__python}|'
 
 %build
-CFLAGS="%{optflags} -fno-strict-aliasing" %{__python} setup.py build
+CFLAGS="%{optflags} -fno-strict-aliasing" python setup.py build
 
 pushd %{py2dir}
-CFLAGS="%{optflags} -fno-strict-aliasing" %{__python2} setup.py build
+CFLAGS="%{optflags} -fno-strict-aliasing" python2} setup.py build
 popd
 
 %install
-%{__python} setup.py install --skip-build --root %{buildroot}
+python setup.py install --skip-build --root %{buildroot}
 
 pushd %{py2dir}
-%{__python2} setup.py install --skip-build --root %{buildroot}
+python setup.py install --skip-build --root %{buildroot}
 popd
 
 
