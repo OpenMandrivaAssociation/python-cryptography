@@ -4,7 +4,7 @@
 
 Summary:	crytographic recipes for python
 Name:		python-%{pname}
-Version:	2.9
+Version:	2.9.2
 Release:	1
 Source0:	https://github.com/pyca/cryptography/archive/%{version}.tar.gz
 Source100:	%{name}.rpmlintrc
