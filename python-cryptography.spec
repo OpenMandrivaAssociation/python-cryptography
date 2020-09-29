@@ -5,7 +5,7 @@
 Summary:	crytographic recipes for python
 Name:		python-%{pname}
 Version:	2.9.2
-Release:	1
+Release:	2
 Source0:	https://github.com/pyca/cryptography/archive/%{version}.tar.gz
 Source100:	%{name}.rpmlintrc
 License:	LGPLv2
@@ -58,24 +58,22 @@ find %{py2dir} -name '*.py' | xargs sed -i '1s|^#!python|#!%{__python2}|'
 find -name '*.py' | xargs sed -i '1s|^#!python|#!%{__python}|'
 
 %build
-CFLAGS="%{optflags} -fno-strict-aliasing" %{__python} setup.py build
+CFLAGS="%{optflags} -fno-strict-aliasing" python setup.py build
 
 pushd %{py2dir}
 CFLAGS="%{optflags} -fno-strict-aliasing" %{__python2} setup.py build
 popd
 
 %install
-%{__python} setup.py install --skip-build --root %{buildroot}
+python setup.py install --skip-build --root %{buildroot}
 
 pushd %{py2dir}
 %{__python2} setup.py install --skip-build --root %{buildroot}
 popd
 
-
 %files
 %{py_platsitedir}/cryptography/
 %{py_platsitedir}/cryptography-*.egg-info
-
 
 %files -n python2-%{pname}
 %{py2_platsitedir}/cryptography
