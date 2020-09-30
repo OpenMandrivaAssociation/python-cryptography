@@ -4,8 +4,8 @@
 
 Summary:	crytographic recipes for python
 Name:		python-%{pname}
-Version:	2.9.2
-Release:	2
+Version:	3.1.1
+Release:	1
 Source0:	https://github.com/pyca/cryptography/archive/%{version}.tar.gz
 Source100:	%{name}.rpmlintrc
 License:	LGPLv2
@@ -31,7 +31,7 @@ Summary:	Documentation for python-%{pname}
 BuildArch:	noarch
 
 %description doc
-Documentation for %{name}
+Documentation for %{name}.
 
 %prep
 %setup -qn %{pname}-%{version}
