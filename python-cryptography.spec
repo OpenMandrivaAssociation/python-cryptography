@@ -5,17 +5,17 @@
 Summary:	crytographic recipes for python
 Name:		python-%{pname}
 Version:	3.4.7
-Release:	1
+Release:	2
+License:	LGPLv2
+Group:		Development/Python
+Url:		https://github.com/pyca/cryptography
 Source0:	https://github.com/pyca/cryptography/archive/%{version}/%{name}-%{version}.tar.gz
 Source100:	%{name}.rpmlintrc
 Patch0:		0001-fix-pkcs12-parse-ordering.-fixes-5872-5879.patch
 Patch1:		0002-WIP-3.0.0-support-5250.patch
 Patch2:		0003-switch-to-using-EVP_PKEY_derive-instead-of-DH_comput.patch
-License:	LGPLv2
-Group:		Development/Python
-Url:		https://github.com/pyca/cryptography
 BuildRequires:	pkgconfig(openssl)
-BuildRequires:	pkgconfig(python3)
+BuildRequires:	pkgconfig(python)
 BuildRequires:	python3dist(setuptools-rust)
 BuildRequires:	python-six
 BuildRequires:	python-cffi
@@ -43,13 +43,15 @@ Documentation for %{name}.
 find -name '*.py' | xargs sed -i '1s|^#!python|#!%{__python}|'
 
 %build
-CFLAGS="%{optflags} -fno-strict-aliasing" python setup.py build
+export CFLAGS="%{optflags} -fno-strict-aliasing"
+%py_build
 
 %install
-python setup.py install --skip-build --root %{buildroot}
+%py_install
 
 %files
-%{py_platsitedir}/cryptography/
+%dir %{py_platsitedir}/cryptography
+%{py_platsitedir}/cryptography/*
 %{py_platsitedir}/cryptography-*.egg-info
 
 %files doc
