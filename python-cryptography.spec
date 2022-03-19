@@ -4,16 +4,13 @@
 
 Summary:	crytographic recipes for python
 Name:		python-%{pname}
-Version:	3.4.7
-Release:	2
+Version:	36.0.2
+Release:	1
 License:	LGPLv2
 Group:		Development/Python
 Url:		https://github.com/pyca/cryptography
 Source0:	https://github.com/pyca/cryptography/archive/%{version}/%{name}-%{version}.tar.gz
 Source100:	%{name}.rpmlintrc
-Patch0:		0001-fix-pkcs12-parse-ordering.-fixes-5872-5879.patch
-Patch1:		0002-WIP-3.0.0-support-5250.patch
-Patch2:		0003-switch-to-using-EVP_PKEY_derive-instead-of-DH_comput.patch
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python3dist(setuptools-rust)
