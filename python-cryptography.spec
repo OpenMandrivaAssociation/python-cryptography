@@ -9,7 +9,8 @@ Release:	1
 License:	LGPLv2
 Group:		Development/Python
 Url:		https://github.com/pyca/cryptography
-Source0:	https://github.com/pyca/cryptography/archive/%{version}/%{name}-%{version}.tar.gz
+Source0:	https://github.com/pyca/cryptography/archive/%{version}/%{pname}-%{version}.tar.gz
+Source1:	cryptography-%{version}-vendor.tar.bz2
 Source100:	%{name}.rpmlintrc
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(python)
@@ -36,6 +37,17 @@ Documentation for %{name}.
 
 %prep
 %autosetup -n %{pname}-%{version} -p1
+
+mkdir -p .cargo
+cat >> .cargo/config << EOF
+[source.crates-io]
+replace-with = "vendored-sources"
+
+[source.vendored-sources]
+directory = "./vendor"
+EOF
+
+tar xf %{SOURCE1}
 
 find -name '*.py' | xargs sed -i '1s|^#!python|#!%{__python}|'
 
