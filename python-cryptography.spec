@@ -4,7 +4,7 @@
 
 Summary:	crytographic recipes for python
 Name:		python-%{pname}
-Version:	36.0.2
+Version:	37.0.4
 Release:	1
 License:	LGPLv2
 Group:		Development/Python
