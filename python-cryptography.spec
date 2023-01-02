@@ -15,7 +15,8 @@ Source1:	cryptography-%{version}-vendor.tar.bz2
 Source100:	%{name}.rpmlintrc
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(python)
-BuildRequires:	python3dist(setuptools-rust)
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(setuptools-rust)
 BuildRequires:	python-six
 BuildRequires:	python-cffi
 BuildRequires:	python-distribute
@@ -62,7 +63,7 @@ export CFLAGS="%{optflags} -fno-strict-aliasing"
 %files
 %dir %{py_platsitedir}/cryptography
 %{py_platsitedir}/cryptography/*
-%{py_platsitedir}/cryptography-*.egg-info
+%{py_platsitedir}/cryptography-*.*info
 
 %files doc
 %doc README.rst CHANGELOG.rst
