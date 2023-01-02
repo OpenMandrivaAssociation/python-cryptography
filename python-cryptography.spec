@@ -4,12 +4,13 @@
 
 Summary:	crytographic recipes for python
 Name:		python-%{pname}
-Version:	37.0.4
+Version:	39.0.0
 Release:	1
 License:	LGPLv2
 Group:		Development/Python
 Url:		https://github.com/pyca/cryptography
 Source0:	https://github.com/pyca/cryptography/archive/%{version}/%{pname}-%{version}.tar.gz
+# Generate using vendor_rust.py (Source100) with network on
 Source1:	cryptography-%{version}-vendor.tar.bz2
 Source100:	%{name}.rpmlintrc
 BuildRequires:	pkgconfig(openssl)

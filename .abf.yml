@@ -1,3 +1,3 @@
 sources:
-  cryptography-37.0.4-vendor.tar.bz2: eca566e4bf80dca2c2619c08ff1ae41d2c326e40
-  cryptography-37.0.4.tar.gz: e5210ca62ed4bb41ae288fbf46faa0f0f1a7eb09
+  cryptography-39.0.0.tar.gz: 2151abdf0dd1337fc2e5ddd24fc1220d444c4268
+  cryptography-39.0.0-vendor.tar.bz2: cd156f8d2b0027dab2bd0e63bbcb3c51ac532254
