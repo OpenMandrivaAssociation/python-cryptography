@@ -5,7 +5,7 @@
 Summary:	crytographic recipes for python
 Name:		python-%{pname}
 Version:	39.0.0
-Release:	1
+Release:	2
 License:	LGPLv2
 Group:		Development/Python
 Url:		https://github.com/pyca/cryptography
