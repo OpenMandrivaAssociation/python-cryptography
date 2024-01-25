@@ -4,22 +4,24 @@
 
 Summary:	crytographic recipes for python
 Name:		python-%{pname}
-Version:	39.0.0
-Release:	2
+Version:	42.0.1
+Release:	1
 License:	LGPLv2
 Group:		Development/Python
 Url:		https://github.com/pyca/cryptography
 Source0:	https://github.com/pyca/cryptography/archive/%{version}/%{pname}-%{version}.tar.gz
 # Generate using vendor_rust.py (Source100) with network on
 Source1:	cryptography-%{version}-vendor.tar.bz2
-Source100:	%{name}.rpmlintrc
+Source100:	https://src.fedoraproject.org/rpms/python-cryptography/raw/rawhide/f/vendor_rust.py
+Source1000:	%{name}.rpmlintrc
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python%{pyver}dist(pip)
-BuildRequires:	python%{pyver}dist(setuptools-rust)
+BuildRequires:	python%{pyver}dist(cffi)
+BuildRequires:	python%{pyver}dist(setuptools-rust) >= 1.8.0
 BuildRequires:	python-six
-BuildRequires:	python-cffi
 BuildRequires:	python-distribute
+BuildRequires:	rust
 Requires:	python-pkg-resources
 
 %description
