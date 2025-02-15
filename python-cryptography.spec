@@ -1,10 +1,10 @@
-#define debug_package %nil
+%undefine _debugsource_packages
 %define pname cryptography
 %define name python-%{pname}
 
 Summary:	crytographic recipes for python
 Name:		python-%{pname}
-Version:	42.0.1
+Version:	44.0.1
 Release:	1
 License:	LGPLv2
 Group:		Development/Python
@@ -63,9 +63,9 @@ export CFLAGS="%{optflags} -fno-strict-aliasing"
 %py_install
 
 %files
-%dir %{py_platsitedir}/cryptography
-%{py_platsitedir}/cryptography/*
+%{py_platsitedir}/cryptography
 %{py_platsitedir}/cryptography-*.*info
+%{py_platsitedir}/rust
 
 %files doc
 %doc README.rst CHANGELOG.rst
