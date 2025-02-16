@@ -18,6 +18,7 @@ BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(cffi)
+BuildRequires:	python%{pyver}dist(maturin)
 BuildRequires:	python%{pyver}dist(setuptools-rust) >= 1.8.0
 BuildRequires:	python-six
 BuildRequires:	python-distribute
