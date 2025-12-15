@@ -4,8 +4,8 @@
 
 Summary:	crytographic recipes for python
 Name:		python-%{pname}
-Version:	44.0.1
-Release:	2
+Version:	46.0.3
+Release:	1
 License:	LGPLv2
 Group:		Development/Python
 Url:		https://github.com/pyca/cryptography
@@ -66,7 +66,6 @@ export CFLAGS="%{optflags} -fno-strict-aliasing"
 %files
 %{py_platsitedir}/cryptography
 %{py_platsitedir}/cryptography-*.*info
-%{py_platsitedir}/rust
 
 %files doc
 %doc README.rst CHANGELOG.rst
