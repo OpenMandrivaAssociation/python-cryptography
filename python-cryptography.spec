@@ -3,7 +3,7 @@
 
 Name:		python-cryptography
 Summary:	Crytographic recipes for python
-Version:	46.0.5
+Version:	46.0.6
 Release:	1
 License:	LGPLv2
 Group:		Development/Python
@@ -13,8 +13,8 @@ Source0:	https://github.com/pyca/cryptography/archive/%{version}/%{module}-%{ver
 Source1:	cryptography-%{version}-vendor.tar.bz2
 Source100:	https://src.fedoraproject.org/rpms/python-cryptography/raw/rawhide/f/vendor_rust.py
 Source1000:	%{name}.rpmlintrc
-# Patch0 for 46.0.5: https://github.com/pyca/cryptography/commit/43eb178ee3aae8d0060221118437b03c23570a41
-# Patch0 should be able to be dropped in the next release (> 46.0.5) as it has been merged upstream.
+# Patch0 for 46.0.6: https://github.com/pyca/cryptography/commit/43eb178ee3aae8d0060221118437b03c23570a41
+# Patch0 should be able to be dropped in the next release (> 46.0.6) as it has been merged upstream.
 Patch0:		https://github.com/pyca/cryptography/commit/43eb178ee3aae8d0060221118437b03c23570a41.patch#/fix-installing-stray-files-into-site-packages.patch
 
 BuildRequires:	pkgconfig(openssl)
