@@ -3,7 +3,7 @@
 
 Name:		python-cryptography
 Summary:	Crytographic recipes for python
-Version:	46.0.6
+Version:	46.0.7
 Release:	1
 License:	LGPLv2
 Group:		Development/Python
