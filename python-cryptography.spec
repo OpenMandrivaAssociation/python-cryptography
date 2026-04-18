@@ -4,7 +4,7 @@
 Name:		python-cryptography
 Summary:	Crytographic recipes for python
 Version:	46.0.7
-Release:	1
+Release:	2
 License:	LGPLv2
 Group:		Development/Python
 URL:		https://github.com/pyca/cryptography
@@ -29,7 +29,6 @@ BuildRequires:	python-six
 BuildRequires:	python-distribute
 BuildRequires:	rust-packaging
 BuildRequires:	cargo
-Requires:	python-pkg-resources
 
 %description
 %{name} is a package which provides cryptographic recipes
