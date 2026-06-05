@@ -4,7 +4,7 @@
 Name:		python-cryptography
 Summary:	Crytographic recipes for python
 Version:	48.0.0
-Release:	1
+Release:	2
 License:	Apache-2.0 OR BSD-3-Clause
 Group:		Development/Python
 URL:		https://github.com/pyca/cryptography
