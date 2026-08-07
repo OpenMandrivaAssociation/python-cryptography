@@ -3,7 +3,7 @@
 
 Name:		python-cryptography
 Summary:	Crytographic recipes for python
-Version:	49.0.0
+Version:	50.0.0
 Release:	1
 License:	Apache-2.0 OR BSD-3-Clause
 Group:		Development/Python
